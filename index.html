@@ -44,7 +44,7 @@
     <h1>Romanize Urdu Campaign</h1>
     
     <div class="language-toggle">
-        <button onclick="toggleLanguage()">Switch Language</button>
+        <button id="languageToggle" onclick="toggleLanguage()">Roman Urdu</button>
     </div>
     
     <div id="english-article" class="article">
@@ -63,13 +63,16 @@
         function toggleLanguage() {
             const englishArticle = document.getElementById('english-article');
             const romanUrduArticle = document.getElementById('roman-urdu-article');
+            const toggleButton = document.getElementById('languageToggle');
             
             if (englishArticle.style.display === 'none') {
                 englishArticle.style.display = 'block';
                 romanUrduArticle.style.display = 'none';
+                toggleButton.textContent = 'Roman Urdu';
             } else {
                 englishArticle.style.display = 'none';
                 romanUrduArticle.style.display = 'block';
+                toggleButton.textContent = 'English';
             }
         }
     </script>
