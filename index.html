@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romanize Urdu Campaign</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .language-toggle {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .article {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Romanize Urdu Campaign</h1>
+    
+    <div class="language-toggle">
+        <button onclick="toggleLanguage()">Switch Language</button>
+    </div>
+    
+    <div id="english-article" class="article">
+        <h2>The Importance of Romanizing Urdu</h2>
+        <p>Romanization of Urdu is a crucial step towards making the language more accessible to a global audience. By using the Roman alphabet to represent Urdu sounds, we can bridge the gap between different writing systems and promote cultural exchange.</p>
+        <p>This initiative aims to preserve the rich linguistic heritage of Urdu while adapting it to modern communication needs. Romanization can facilitate language learning, improve digital communication, and enhance cross-cultural understanding.</p>
+    </div>
+    
+    <div id="roman-urdu-article" class="article" style="display: none;">
+        <h2>Urdu ko Roman Mein Likhne ki Ahmiyat</h2>
+        <p>Urdu ko Roman huroof mein likhna aik ahem qadam hai is zabaan ko aalmi satah par qabil-e-rasai banane ke liye. Roman huroof ka istemal karke Urdu ki awazon ko zahir karna, mukhtalif tahrir ke nizamon ke darmiyan pul ka kaam karta hai aur saqafati tabadele ko farogh deta hai.</p>
+        <p>Is muhem ka maqsad Urdu ki ameer lisani virasat ko mahfooz rakhte hue ise jadeed muwasilati zarooriyat ke mutabiq dhalna hai. Roman rasm-ul-khat, zabaan sikhne mein madad kar sakta hai, digital muwasilat ko behtar bana sakta hai, aur mukhtalif saqafaton ke darmiyan samajh-bujh ko barha sakta hai.</p>
+    </div>
+
+    <script>
+        function toggleLanguage() {
+            const englishArticle = document.getElementById('english-article');
+            const romanUrduArticle = document.getElementById('roman-urdu-article');
+            
+            if (englishArticle.style.display === 'none') {
+                englishArticle.style.display = 'block';
+                romanUrduArticle.style.display = 'none';
+            } else {
+                englishArticle.style.display = 'none';
+                romanUrduArticle.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
